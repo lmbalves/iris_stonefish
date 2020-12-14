@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<scenario>
+    <robot name="iris" fixed="false" self_collisions="false">
+    
+        <base_link name="Vehicle" type="compound" physics="submerged">
+        <mass value="20.0"/>
+            <external_part name="foam_right" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/shell_foam_right.obj" scale="1.0"/>
+                    <thickness value="0.03"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/shell_foam_right.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Foam"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="foam_right" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/shell_foam_left.obj" scale="1.0"/>
+                    <thickness value="0.03"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/shell_foam_left.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Foam"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+	        <external_part name="base" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/base.obj" scale="1.0"/>
+                    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/base.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="batt" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/batt.obj" scale="1.0"/>
+                    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/batt.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Aco"/>
+                <look name="yellow"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="cam01" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/cam01.obj" scale="1.0"/>
+                    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/cam01.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="cam02" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/cam02.obj" scale="1.0"/>
+                    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/cam02.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="escs_cylinder" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/escs_cylinder.obj" scale="1.0"/>
+                    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/escs_cylinder.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Aluminium"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+           
+            <external_part name="main_cylinder" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/main_cylinder.obj" scale="1.0"/>
+		    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/main_cylinder.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Aluminium"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+
+            <external_part name="lat_right" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/lat_right.obj" scale="1.0"/>
+		    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/lat_right.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="lat_left" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/lat_left.obj" scale="1.0"/>
+		    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/lat_left.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="left_light" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/left_light.obj" scale="1.0"/>
+		    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/left_light.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="oi"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="right_light" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/right_light.obj" scale="1.0"/>
+		    <thickness value="0.003"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/right_light.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="oi"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="shield" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/shield.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/shield.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="motor_support_dl" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/motor_support_dl.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/motor_support_dl.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="motor_support_dr" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/motor_support_dr.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/motor_support_dr.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="motor_support_tl" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/motor_support_tl.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/motor_support_tl.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="motor_support_tr" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/motor_support_tr.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/motor_support_tr.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Fiberglass"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_bld" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_bld.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical> 
+                <visual>
+                    <mesh filename="iris/thruster_bld.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_blt" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_blt.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_blt.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_brd" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_brd.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_brd.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_brt" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_brt.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_brt.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_sb" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_sb.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical> 
+                <visual>
+                    <mesh filename="iris/thruster_sb.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_sf" type="model" physics="submerged">
+               <physical>
+                    <mesh filename="iris/thruster_sf.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_sf.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_sul" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_sul.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_sul.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="thruster_sur" type="model" physics="submerged">
+                <physical>
+                    <mesh filename="iris/thruster_sur.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/thruster_sur.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Neutral"/>
+                <look name="gray"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="travessa_b" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/travessa_b.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/travessa_b.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+            <external_part name="travessa_d" type="model" physics="submerged" buoyant="false">
+                <physical>
+                    <mesh filename="iris/travessa_d.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </physical>
+                <visual>
+                    <mesh filename="iris/travessa_d.obj" scale="1.0"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+                <material name="Plastic"/>
+                <look name="black"/>
+                <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            </external_part>
+             <internal_part name="foam" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.066" height="0.5"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.0 -0.15 -0.05"/>
+				<material name="Neutral"/>
+				<mass value="2.65"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.05 0.0 0.0"/>
+			</internal_part>
+            <internal_part name="foam2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.066" height="0.5"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.0 0.15 -0.05"/>
+				<material name="Neutral"/>
+				<mass value="2.65"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+        </base_link>
+
+        <sensor name="dynamics" type="odometry" rate="30.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<ros_publisher topic="/iris/dynamics/odometry"/>
+		</sensor>
+
+		<sensor name="pressure" type="pressure" rate="5.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<noise pressure="5.0"/>
+			<ros_publisher topic="/iris/navigator/pressure"/>
+		</sensor>
+
+		<sensor name="dvl" type="dvl" rate="5.0">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 -0.785" xyz="0.0 0.0 0.1"/>
+			<specs beam_angle="30.0"/>
+			<range velocity="2.6 2.6 2.6" altitude_min="0.5" altitude_max="50.0"/>
+			<noise velocity="0.0015" altitude="0.001"/>
+			<ros_publisher topic="/iris/navigator/dvl" altitude_topic="/iris/navigator/altitude"/>
+		</sensor>
+
+		<sensor name="imu_filter" type="imu" rate="20.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<noise angle="0.000001745" angular_velocity="0.00001745"/>
+			<ros_publisher topic="/iris/navigator/imu"/>
+		</sensor>
+
+		<sensor name="gps" type="gps" rate="1.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<noise ned_position="0.5"/>
+			<ros_publisher topic="/iris/navigator/gps"/>
+		</sensor>
+
+		<sensor name="proscilica_back" type="camera" rate="10.0">
+			<link name="Vehicle"/>
+			<origin rpy="1.57 0.0 1.57" xyz="0.48 0.0 -0.04"/>
+			<specs resolution_x="1360" resolution_y="1024" horizontal_fov="55.0"/>
+			<rendering spp="4"/>
+			<ros_publisher topic="/iris/proscilica_back"/>
+		</sensor>
+		<sensor name="proscilica_front" type="camera" rate="10.0">
+			<link name="Vehicle"/>
+			<origin rpy="1.57 0.0 -1.57" xyz="-0.35 0.0 -0.04"/>
+			<specs resolution_x="1360" resolution_y="1024" horizontal_fov="55.0"/>
+			<rendering spp="4"/>
+			<ros_publisher topic="/iris/proscilica_front"/>
+		</sensor>
+        <actuator name="ThrusterSurge1" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.45 -0.165 -0.09"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.010" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterSurge2" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.45 0.165 -0.09"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+    <actuator name="ThrusterSurge3" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.45 0.165 0.10"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterSurge4" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.45 -0.165 0.10"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterHeaveleft" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 -1.571 -1.571" xyz="0.0 0.18 0.01"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterHeaveright" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 -1.571 -1.571" xyz="0.0 -0.18 0.01"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterSwayfront" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 3.1416 1.571" xyz="0.217 0.0 0.065"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+		<actuator name="ThrusterSwayback" type="thruster">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 -3.1416 -1.571" xyz="-0.15 0.0 0.065"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
+			<propeller diameter="0.1" right="true">
+				<mesh filename="iris/propeller.obj" scale="0.45"/>
+				<material name="Neutral"/>
+				<look name="propeller"/>
+			</propeller>
+		</actuator>
+
+    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
+    <ros_publisher thrusters="/iris/controller/thruster_state"/>
+    </robot>
+</scenario>

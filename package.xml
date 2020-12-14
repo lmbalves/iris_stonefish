@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+	<name>iris_stonefish</name>
+	<version>1.0.0</version>
+	<description>The iris_stonefish package</description>
+	<author email="lmbalves@gmail.com">Luis Alves</author>
+	<maintainer email="lmbalves@gmail.com">Luis Alves</maintainer>
+	<license>BSD</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<depend>stonefish_ros</depend>
+	<depend>cola2_lib_ros</depend>
+	<depend>cola2_msgs</depend>
+</package>

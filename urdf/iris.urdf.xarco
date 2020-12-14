@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot name="iris" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Load macros -->
+  <xacro:include filename="$(find cola2_lib_ros)/src/cola2_lib_ros/urdf_macros.xacro"/>
+  
+  <!-- Load iris with payload -->
+  <xacro:include filename="$(find iris_description)/urdf/payload.urdf.xacro"/>
+  
+</robot>
