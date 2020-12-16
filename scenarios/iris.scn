@@ -439,10 +439,10 @@
 		</sensor>
         <actuator name="ThrusterSurge1" type="thruster">
 			<link name="Vehicle"/>
-			<origin rpy="3.1416 0.0 0.0" xyz="0.45 -0.165 -0.09"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.010" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.43 -0.1653 -0.089"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -450,10 +450,10 @@
 
 		<actuator name="ThrusterSurge2" type="thruster">
 			<link name="Vehicle"/>
-			<origin rpy="3.1416 0.0 0.0" xyz="0.45 0.165 -0.09"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.43 0.1653 -0.089"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -461,10 +461,10 @@
 
     <actuator name="ThrusterSurge3" type="thruster">
 			<link name="Vehicle"/>
-			<origin rpy="3.1416 0.0 0.0" xyz="0.45 0.165 0.10"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.43 0.1653 0.105"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -472,10 +472,10 @@
 
 		<actuator name="ThrusterSurge4" type="thruster">
 			<link name="Vehicle"/>
-			<origin rpy="3.1416 0.0 0.0" xyz="0.45 -0.165 0.10"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<origin rpy="3.1416 0.0 0.0" xyz="0.43 -0.1653 0.105"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -484,9 +484,9 @@
 		<actuator name="ThrusterHeaveleft" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 -1.571 -1.571" xyz="0.0 0.18 0.01"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -495,9 +495,9 @@
 		<actuator name="ThrusterHeaveright" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 -1.571 -1.571" xyz="0.0 -0.18 0.01"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -506,9 +506,9 @@
 		<actuator name="ThrusterSwayfront" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 3.1416 1.571" xyz="0.217 0.0 0.065"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -517,9 +517,9 @@
 		<actuator name="ThrusterSwayback" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 -3.1416 -1.571" xyz="-0.15 0.0 0.065"/>
-			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1000.0" inverted="true"/>
-			<propeller diameter="0.1" right="true">
-				<mesh filename="iris/propeller.obj" scale="0.45"/>
+			<specs thrust_coeff="0.098" torque_coeff="0.005" max_rpm="1900.0" inverted="true"/>
+			<propeller diameter="0.079" right="true">
+				<mesh filename="iris/thruster_t200.obj" scale="0.5"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
