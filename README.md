@@ -4,7 +4,7 @@ Instructions
 
 This was tested in Ubuntu 18.04 and 20.04 without any known issues to this date.
 
-Clone stonefish to your home directory or any oteher but the workspace for ROS, build and install on your machine. You can find a fork of the oroginal repo used in https://github.com/lmbalves/stonefish.git
+Clone stonefish to your home directory or any other but the workspace for ROS, build and install on your machine. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git
 
 If you dont't have one already, create a workspace
 
