@@ -7,3 +7,4 @@
   <xacro:include filename="$(find iris_description)/urdf/payload.urdf.xacro"/>
   
 </robot>
+<!-- Teh only purpose for this file is to load in rviz maybe-->
