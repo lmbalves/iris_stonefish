@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<scenario>
+    <robot name="net" fixed="false" self_collisions="false">
+    
+    <base_link name="net" type="compound" physics="submerged">
+    <mass value="20.0"/>
+    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 5.0"/>
+    <internal_part name="foam" type="sphere" physics="submerged" buoyant="false">
+		<dimensions radius="1.0"/>
+		<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 5.0"/>
+		<material name="Rock"/>
+		<mass value="20.0"/>
+		<look name="Gray"/>
+		<compound_transform rpy="0.0 0.0 0.0" xyz="0.05 0.0 0.0"/>
+	</internal_part>
+    <comm name="Modem" device_id="5" type="acoustic_modem">
+    <specs horizontal_fov="360.0" vertical_fov="120.0" range="1000.0"/>
+    <connect device_id="9" occlusion_test="true"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <link name="Link1"/>
+    </comm>
+
+    <!--<ros_subscriber comm="/net/" /> 
+    <ros_publisher comm="/net"/> -->
+    </robot>
+</scenario>

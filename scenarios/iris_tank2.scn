@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<scenario>
+    <environment>
+        <ned latitude="41.7777" longitude="3.0333"/>
+        <sun azimuth="20.0" elevation="50.0"/>
+        <ocean>
+			<water density="1000.0" jerlov="0.0" waves="0.0"/>
+	    </ocean>
+    </environment>
+    <materials>
+        <material name="Neutral" density="1000.0" restitution="0.5"/>
+        <material name="Rock" density="3000.0" restitution="0.8"/>
+        <material name="Foam" density="250.0" restitution="0.3"/>
+        <material name="Plastic" density="900.0" restitution="0.7"/>
+        <material name="Aco" density="8050.0" restitution="0.7"/>
+        <friction_table>
+            <friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
+            <friction material1="Neutral" material2="Rock" static="0.2" dynamic="0.1"/>
+            <friction material1="Neutral" material2="Foam" static="0.5" dynamic="0.2"/>
+            <friction material1="Neutral" material2="Plastic" static="0.5" dynamic="0.2"/>
+            <friction material1="Rock" material2="Rock" static="0.9" dynamic="0.7"/>
+            <friction material1="Rock" material2="Foam" static="0.6" dynamic="0.4"/>
+            <friction material1="Rock" material2="Plastic" static="0.6" dynamic="0.3"/>
+            <friction material1="Foam" material2="Foam" static="0.5" dynamic="0.2"/>
+            <friction material1="Foam" material2="Plastic" static="0.5" dynamic="0.2"/>
+            <friction material1="Plastic" material2="Plastic" static="0.8" dynamic="0.5"/>
+        </friction_table>
+    </materials>
+    <looks>
+        <look name="black" gray="0.05" roughness="0.2"/>
+        <look name="yellow" rgb="1.0 0.9 0.0" roughness="0.3"/>
+        <look name="gray" gray="0.3" roughness="0.4" metalness="0.5"/>
+        <look name="seabed" rgb="0.7 0.7 0.5" roughness="0.9"/>
+        <look name="propeller" rgb="1.0 0.0 0.0" roughness="0.3" metalness="0.8"/>
+        <look name="duct" gray="0.1" roughness="0.4" metalness="0.5"/>
+        <look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
+        <look name="ee" rgb="0.59 0.56 0.51" roughness="0.6" metalness="0.8"/>
+        <look name="pipe" rgb="1.0 0.2 0.0" roughness="0.2" metalness="0.3"/>
+	    <look name="oi" rgb="1.0 1.0 1.0" roughness="0.3"/>
+    </looks>
+
+	<!-- to load dock -->
+    	<static name="dock" type="model">
+		<physical>
+			<mesh filename="dock2_freecad.obj" scale="0.2"/>
+			<thickness value="0.03"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+                    <mesh filename="dock2_freecad.obj" scale="0.2"/>
+                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </visual>
+		<material name="Aco"/>
+		<look name="manipulator"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
+	</static>
+	
+    <!-- leds-->
+	<light name="Omni"> <!-- top-->
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="1 0 0"/>
+	    <world_transform xyz="1.1 0 8.05" rpy="0.0 0.0 0.0"/>
+	</light>
+    <light name="Omni"> 
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="1 0 0"/>
+	    <world_transform xyz="0.6 0 8.05" rpy="0.0 0.0 0.0"/>
+	</light>
+	<light name="Omni">
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="1 0 0"/>
+	    <world_transform xyz="0.1 0 8.05" rpy="0.0 0.0 0.0"/>
+	</light>
+	<light name="Omni"> <!-- bottom-->
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="0 1 0"/>
+	    <world_transform xyz="1.1 0 8.8" rpy="0.0 0.0 0.0"/>
+	</light>
+    <light name="Omni">
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="0 1 0"/>
+        <world_transform xyz="0.6 0 8.8" rpy="0.0 0.0 0.0"/>
+	</light>
+	<light name="Omni"> 
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="0 1 0"/>
+	    <world_transform xyz="0.1 0 8.8" rpy="0.0 0.0 0.0"/>
+	</light>
+ <!-- original center light
+     	<light name="Omni"> 
+	    <specs radius="0.05" illuminance="100.0"/>
+	    <color rgb="0 0 1"/>
+	    <world_transform xyz="0.6 1 8.425" rpy="0.0 0.0 0.0"/>
+	</light>
+-->
+	<light name="Omni"> <!-- center -->
+	    <specs radius="0.05" illuminance="100.0"/>
+	    <color rgb="0 0 1"/>
+	    <!--<world_transform xyz="0.8 1 8.425" rpy="0.0 0.0 0.0"/>-->
+        <world_transform xyz="0.8 1 8.475" rpy="0.0 0.0 0.0"/>
+	</light>
+    <light name="Omni"> 
+	    <specs radius="0.05" illuminance="100.0"/>
+	    <color rgb="0 0 1"/>
+	    <!--<world_transform xyz="0.4 1 8.425" rpy="0.0 0.0 0.0"/>-->
+        <world_transform xyz="0.4 1 8.375" rpy="0.0 0.0 0.0"/>
+	</light>
+
+   <!-- to load the heightmap put "terrain" instead-->
+    <static name="Bottom" type="plane"> 
+        <!--<height_map filename="porto_fliped.png"/> 
+        <dimensions scalex="2" scaley="2" height="2000.0"/> -->
+        <material name="Rock"/>
+        <look name="seabed"/>
+        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/>
+    </static> 
+
+    <!-- to load the heightmap put "terrain" instead-->
+    <include file="$(find iris_stonefish)/scenarios/iris.scn"/>
+</scenario>

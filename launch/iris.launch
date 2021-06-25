@@ -4,14 +4,16 @@
      <!-- Static transform -->
     <node name="world2ned" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 3.1415 world world_ned 100"/>
     <!-- Control Nodes -->
-     <!-- <node name="setpoints_pub_node" pkg="iris_control" type="setpoints_pub_node"/> -->
-     <node name="setpoints_mkII" pkg="iris_control" type="setpoints_mkII"/> 
+     <!-- <node name="setpoints_pub_node2" pkg="iris_control" type="setpoints_pub_node2"/> --> 
+     <node name="setpoints_pub_node" pkg="iris_control" type="setpoints_pub_node"/>
+     <!--<node name="setpoints_mkII" pkg="iris_control" type="setpoints_mkII"/> -->
     <!-- Run Simulator -->
     <include file="$(find stonefish_ros)/launch/simulator.launch">
     	<arg name="simulation_data" value="$(find iris_stonefish)/data"/>
-    	<arg name="scenario_description" value="$(find iris_stonefish)/scenarios/iris_tank.scn"/>
-   		<arg name="simulation_rate" value="250.0"/>
-    	<arg name="graphics_resolution" value="1200 900"/>
+    	<arg name="scenario_description" value="$(find iris_stonefish)/scenarios/iris_tank2.scn"/>
+   		<arg name="simulation_rate" value="200.0"/>
+    	<arg name="graphics_resolution" value="1440 1010"/>
     	<arg name="graphics_quality" value="medium"/>
     </include>
 </launch>
+

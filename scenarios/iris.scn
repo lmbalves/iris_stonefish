@@ -525,7 +525,7 @@
 			</propeller>
 		</actuator>
 
-    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
     <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
     <ros_publisher thrusters="/iris/controller/thruster_state"/>
     </robot>
