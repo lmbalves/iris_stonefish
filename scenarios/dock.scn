@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<scenario>    
+    <static name="dock" type="model">
+    <base_link name="docking">
+		<physical>
+			<mesh filename="dock2_freecad.obj" scale="0.2"/>
+			<thickness value="0.03"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+            <mesh filename="dock2_freecad.obj" scale="0.2"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </visual>
+	    <material name="Aco"/>
+	    <look name="manipulator"/>
+	    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
+        <comm name="IRIS/USBL" device_id="1" type="usbl">
+        <link name="docking"/>
+            <specs horizontal_fov="360.0" vertical_fov="360.0" range="1000.0"/>
+            <connect device_id="0" occlusion_test="false"/>
+            <autoping rate="0.5"/>
+            <noise range="0.05" horizontal_angle="0.2" vertical_angle="0.5"/>
+            <resolution range="0.1" angle="0.1"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="3.14 0.0 0.0"/>
+            <ros_publisher topic="/dock/navigator/usbl"/>
+        </comm>
+    </static>
+    <light name="Omni"> <!-- top-->
+	    <specs radius="0.05" illuminance="10000.0"/>
+	    <color rgb="1 0 0"/>
+        <world_transform xyz="1.1 0 8.05" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni"> 
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="1 0 0"/>
+        <world_transform xyz="0.6 0 8.05" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni">
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="1 0 0"/>
+        <world_transform xyz="0.1 0 8.05" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni"> <!-- bottom-->
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="0 1 0"/>
+        <world_transform xyz="1.1 0 8.8" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni">
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="0 1 0"/>
+        <world_transform xyz="0.6 0 8.8" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni"> 
+        <specs radius="0.05" illuminance="10000.0"/>
+        <color rgb="0 1 0"/>
+        <world_transform xyz="0.1 0 8.8" rpy="0.0 0.0 0.0"/>
+    </light>
+    <!-- original center light
+    <light name="Omni"> 
+        <specs radius="0.05" illuminance="100.0"/>
+        <color rgb="0 0 1"/>
+        <world_transform xyz="0.6 1 8.425" rpy="0.0 0.0 0.0"/>
+    </light>-->
+    <light name="Omni"> <!-- center -->
+        <specs radius="0.05" illuminance="100.0"/>
+        <color rgb="0 0 1"/>
+        <!--<world_transform xyz="0.8 1 8.425" rpy="0.0 0.0 0.0"/>-->
+        <world_transform xyz="0.8 1 8.475" rpy="0.0 0.0 0.0"/>
+    </light>
+    <light name="Omni"> 
+        <specs radius="0.05" illuminance="100.0"/>
+        <color rgb="0 0 1"/>
+        <!--<world_transform xyz="0.4 1 8.425" rpy="0.0 0.0 0.0"/>-->
+        <world_transform xyz="0.4 1 8.375" rpy="0.0 0.0 0.0"/>
+    </light>
+
+</scenario>
