@@ -402,7 +402,7 @@
 
 		<sensor name="dvl" type="dvl" rate="5.0">
 			<link name="Vehicle"/>
-			<origin rpy="3.1416 0.0 -0.785" xyz="0.0 0.0 0.1"/>
+			<origin rpy="3.1416 0.0 -0.785" xyz="0.0 0.0 0.2"/>
 			<specs beam_angle="30.0"/>
 			<range velocity="2.6 2.6 2.6" altitude_min="0.5" altitude_max="50.0"/>
 			<noise velocity="0.0015" altitude="0.001"/>
@@ -524,9 +524,18 @@
 				<look name="propeller"/>
 			</propeller>
 		</actuator>
+        <comm name="USBL" device_id="1" type="usbl">
+            <link name="Vehicle"/>
+            <specs horizontal_fov="360.0" vertical_fov="360.0" range="1000.0"/>
+            <connect device_id="2" occlusion_test="false"/>
+            <autoping rate="0.5"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.5"/>
+            <ros_publisher topic="/iris/navigator/usbl"/>
+        </comm>
+        <world_transform rpy="0.0 0.0 -1.571" xyz="0.0 -4.0 8.0"/>
+        <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
+        <ros_publisher thrusters="/iris/controller/thruster_state"/>
 
-    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
-    <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
-    <ros_publisher thrusters="/iris/controller/thruster_state"/>
     </robot>
+
 </scenario>

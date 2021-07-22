@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <scenario>    
     <static name="dock" type="model">
-    <base_link name="docking">
 		<physical>
 			<mesh filename="dock2_freecad.obj" scale="0.2"/>
 			<thickness value="0.03"/>
@@ -14,17 +13,16 @@
 	    <material name="Aco"/>
 	    <look name="manipulator"/>
 	    <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
-        <comm name="IRIS/USBL" device_id="1" type="usbl">
-        <link name="docking"/>
+    </static>
+    <comm name="modem" device_id="2" type="acoustic_modem">
             <specs horizontal_fov="360.0" vertical_fov="360.0" range="1000.0"/>
-            <connect device_id="0" occlusion_test="false"/>
+            <connect device_id="1" occlusion_test="false"/>
             <autoping rate="0.5"/>
             <noise range="0.05" horizontal_angle="0.2" vertical_angle="0.5"/>
             <resolution range="0.1" angle="0.1"/>
-            <origin xyz="0.0 0.0 -0.5" rpy="3.14 0.0 0.0"/>
-            <ros_publisher topic="/dock/navigator/usbl"/>
-        </comm>
-    </static>
+            <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 7.5"/>
+            <!-- <ros_publisher topic="/dock/navigator/usbl"/> -->
+    </comm>
     <light name="Omni"> <!-- top-->
 	    <specs radius="0.05" illuminance="10000.0"/>
 	    <color rgb="1 0 0"/>
