@@ -38,83 +38,18 @@
         <look name="pipe" rgb="1.0 0.2 0.0" roughness="0.2" metalness="0.3"/>
 	    <look name="oi" rgb="1.0 1.0 1.0" roughness="0.3"/>
     </looks>
-
-	<!-- to load dock -->
-    	<static name="dock" type="model">
-		<physical>
-			<mesh filename="dock2_freecad.obj" scale="0.2"/>
-			<thickness value="0.03"/>
-			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-		</physical>
-		<visual>
-                    <mesh filename="dock2_freecad.obj" scale="0.2"/>
-                    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-                </visual>
-		<material name="Aco"/>
-		<look name="manipulator"/>
-		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
-	</static>
-	
-    <!-- leds-->
-	<light name="Omni"> <!-- top-->
-	    <specs radius="0.05" illuminance="10000.0"/>
-	    <color rgb="1 0 0"/>
-	    <world_transform xyz="1.1 0 8.05" rpy="0.0 0.0 0.0"/>
-	</light>
-    <light name="Omni"> 
-	    <specs radius="0.05" illuminance="10000.0"/>
-	    <color rgb="1 0 0"/>
-	    <world_transform xyz="0.6 0 8.05" rpy="0.0 0.0 0.0"/>
-	</light>
-	<light name="Omni">
-	    <specs radius="0.05" illuminance="10000.0"/>
-	    <color rgb="1 0 0"/>
-	    <world_transform xyz="0.1 0 8.05" rpy="0.0 0.0 0.0"/>
-	</light>
-	<light name="Omni"> <!-- bottom-->
-	    <specs radius="0.05" illuminance="10000.0"/>
-	    <color rgb="0 1 0"/>
-	    <world_transform xyz="1.1 0 8.8" rpy="0.0 0.0 0.0"/>
-	</light>
-    <light name="Omni">
-        <specs radius="0.05" illuminance="10000.0"/>
-        <color rgb="0 1 0"/>
-        <world_transform xyz="0.6 0 8.8" rpy="0.0 0.0 0.0"/>
-	</light>
-	<light name="Omni"> 
-	    <specs radius="0.05" illuminance="10000.0"/>
-	    <color rgb="0 1 0"/>
-	    <world_transform xyz="0.1 0 8.8" rpy="0.0 0.0 0.0"/>
-	</light>
- <!-- original center light
-     	<light name="Omni"> 
-	    <specs radius="0.05" illuminance="100.0"/>
-	    <color rgb="0 0 1"/>
-	    <world_transform xyz="0.6 1 8.425" rpy="0.0 0.0 0.0"/>
-	</light>
--->
-	<light name="Omni"> <!-- center -->
-	    <specs radius="0.05" illuminance="100.0"/>
-	    <color rgb="0 0 1"/>
-	    <!--<world_transform xyz="0.8 1 8.425" rpy="0.0 0.0 0.0"/>-->
-        <world_transform xyz="0.8 1 8.475" rpy="0.0 0.0 0.0"/>
-	</light>
-    <light name="Omni"> 
-	    <specs radius="0.05" illuminance="100.0"/>
-	    <color rgb="0 0 1"/>
-	    <!--<world_transform xyz="0.4 1 8.425" rpy="0.0 0.0 0.0"/>-->
-        <world_transform xyz="0.4 1 8.375" rpy="0.0 0.0 0.0"/>
-	</light>
-
-   <!-- to load the heightmap put "terrain" instead-->
+    <!-- to load the heightmap put "terrain" instead of plane and uncomment the lines -->
     <static name="Bottom" type="plane"> 
         <!--<height_map filename="porto_fliped.png"/> 
         <dimensions scalex="2" scaley="2" height="2000.0"/> -->
         <material name="Rock"/>
         <look name="seabed"/>
         <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/>
-    </static> 
+    </static>
+    
+	<!-- to load dock  -->
+    <include file= "$(find iris_stonefish)/scenarios/dock.scn"/>
 
-    <!-- to load the heightmap put "terrain" instead-->
+    <!-- load the robot scenario file-->
     <include file="$(find iris_stonefish)/scenarios/iris.scn"/>
 </scenario>
