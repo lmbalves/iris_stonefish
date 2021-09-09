@@ -1,18 +1,8 @@
 <launch>    
 <!-- Configurable arguments -->
     <arg name="robot_name" default="iris"/>
-    <arg name="enable_rviz" default="false"/>
-      <!-- Input arguments -->
-  <arg name="robot_xacro" default="$(find iris_stonefish)/urdf/iris.urdf.xacro"/>
 
-  <!-- Load robot description -->
-<param name="robot_description" command="$(find xacro)/xacro '$(arg robot_xacro)' robot_namespace:=$(arg robot_name)"/>
-<!-- <param command="$(find xacro)/xacro '$(arg xacro_file)' robot_namespace:=$(arg robot_name)" name="$(arg robot_name)/robot_description"/>-->
 
-  <!-- Robot state publisher -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
-     <!-- Static transform -->
-    <node name="world2ned" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 3.1415 world world_ned 100"/>
     <!-- Control Nodes -->
      <!-- <node name="setpoints_pub_node2" pkg="iris_control" type="setpoints_pub_node2"/> --> 
      <node name="setpoints_pub_node" pkg="iris_control" type="setpoints_pub_node"/>
@@ -25,7 +15,5 @@
     	<arg name="graphics_resolution" value="1440 1010"/>
     	<arg name="graphics_quality" value="medium"/>
     </include>
-      <!-- RViz -->
-  <node if="$(arg enable_rviz)" pkg="rviz" type="rviz" name="rviz" args="-d $(find iris_stonefish)/scene/iris.rviz"/>
 </launch>
 
