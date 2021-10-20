@@ -53,8 +53,57 @@
         <dimensions scalex="2" scaley="2" height="2000.0"/> -->
         <material name="Rock"/>
         <look name="seabed"/>
-        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/>
+        <!-- <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/> -->
+        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 5.0"/>
     </static> 
+
+        <!-- <static name="ghost_net" type="terrain">
+        <height_map filename="ghost_net.png"/>
+        <dimensions scalex="0.001" scaley="0.002" height="0.1"/>
+        <material name="Plastic"/>
+        <look name="gray"/>
+        <world_transform rpy="0.0 0.0 15.0" xyz="5.0 5.0 5.0"/>
+    </static> -->
+
+    <static name="ghost_blender" type="model">
+        <physical>
+            <mesh filename="ghost_blender.obj" scale="0.5"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Plastic"/>
+        <look name="gray"/>
+        <world_transform rpy="0.0 0.0 0.0" xyz="3.0 3.0 5.0"/>
+    </static>
+
+    <static name="ghost_blender2" type="model">
+        <physical>
+            <mesh filename="ghost_blender.obj" scale="0.5"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Plastic"/>
+        <look name="gray"/>
+        <world_transform rpy="1.57 0.0 0.0" xyz="-3.0 3.0 5.0"/>
+    </static>
+
+    <static name="trap_blender" type="model">
+        <physical>
+            <mesh filename="trap_blender.obj" scale="0.25"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Plastic"/>
+        <look name="gray"/>
+        <world_transform rpy="-1.57 0.0 0.0" xyz="-3.0 -3.0 5.0"/>
+    </static> 
+
+    <static name="trap_blender_mkIII" type="model">
+        <physical>
+            <mesh filename="ghost_blender_mkIII.obj" scale="0.5"/>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Plastic"/>
+        <look name="gray"/>
+        <world_transform rpy="-1.57 0.0 0.0" xyz="3.0 -3.0 4.9"/>
+    </static>
 
     <include file="$(find iris_stonefish)/scenarios/iris.scn"/>
 </scenario>
