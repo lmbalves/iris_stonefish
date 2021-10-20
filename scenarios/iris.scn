@@ -433,8 +433,10 @@
 		<sensor name="proscilica_front" type="camera" rate="10.0">
 			<link name="Vehicle"/>
 			<origin rpy="1.57 0.0 -1.57" xyz="-0.35 0.0 -0.04"/>
-			<specs resolution_x="1360" resolution_y="1024" horizontal_fov="55.0"/>
-			<rendering spp="4"/>
+			<!-- <specs resolution_x="1360" resolution_y="1024" horizontal_fov="55.0"/> --> 
+             <!-- Preciso de menos resolução para visualizar tudo no monitor  -->
+			<specs resolution_x="900" resolution_y="900" horizontal_fov="55.0"/>
+            <rendering spp="4"/>
 			<ros_publisher topic="/iris/proscilica_front"/>
 		</sensor>
         <actuator name="ThrusterSurge1" type="thruster">
@@ -532,7 +534,8 @@
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.5"/>
             <ros_publisher topic="/iris/navigator/usbl"/>
         </comm>
-        <world_transform rpy="0.0 0.0 -1.571" xyz="0.0 -4.0 8.0"/>
+        <!-- <world_transform rpy="0.0 0.0 -1.571" xyz="0.0 -4.0 8.0"/> -->
+        <world_transform rpy="0.0 0.0 3.14159" xyz="-10.0 0.0 3.0"/>       
         <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
         <ros_publisher thrusters="/iris/controller/thruster_state"/>
 
