@@ -48,7 +48,10 @@
     </static>
     
 	<!-- to load dock  -->
-    <include file= "$(find iris_stonefish)/scenarios/dock.scn"/>
+    <!-- <include file= "$(find iris_stonefish)/scenarios/dock.scn"/> -->
+
+    <!-- to load net  -->
+    <include file= "$(find iris_stonefish)/scenarios/net.scn"/>
 
     <!-- load the robot scenario file-->
     <include file="$(find iris_stonefish)/scenarios/iris.scn"/>
