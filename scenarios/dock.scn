@@ -20,7 +20,7 @@
             <autoping rate="0.5"/>
             <noise range="0.05" horizontal_angle="0.2" vertical_angle="0.5"/>
             <resolution range="0.1" angle="0.1"/>
-            <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 7.5"/>
+            <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
             <!-- <ros_publisher topic="/dock/navigator/usbl"/> -->
     </comm>
     <light name="Omni"> <!-- top-->
