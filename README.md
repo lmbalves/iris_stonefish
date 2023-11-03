@@ -10,8 +10,6 @@ $ sudo ldconfig
 
 If you dont't have one already, create a workspace
 
-Clone cola2_msgs into the workspace, you can find a clone of the original repo used in https://github.com/lmbalves/cola2_msgs_clone.git
-
 Clone stonefish_ros ou can find a fork of the original repo used in https://github.com/lmbalves/stonefish_ros.git
 
 Clone this iris_stonefish into the workspace
