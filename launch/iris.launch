@@ -4,11 +4,9 @@
 
 
     <!-- Control Nodes -->
-     <!-- <node name="setpoints_pub_node2" pkg="iris_control" type="setpoints_pub_node2"/> --> 
-     <node name="setpoints_pub_node" pkg="iris_control" type="setpoints_pub_node"/>
-     <node name="setpoints_range_pose" pkg="iris_control" type="setpoints_range_pose"/>
-     <node name="range_calculator" pkg="iris_control" type="range_calculator"/>
-     <!--<node name="setpoints_mkII" pkg="iris_control" type="setpoints_mkII"/> -->
+     <!-- <node name="pilot" pkg="iris_control" type="pilot"/>
+     <node name="setpoints_range_pose" pkg="iris_control" type="setpoints_range_pose"/> -->
+     <node name="plot_path" pkg="iris_control" type="plot_path.py"/>
     <!-- Run Simulator -->
     <include file="$(find stonefish_ros)/launch/simulator.launch">
     	<arg name="simulation_data" value="$(find iris_stonefish)/data"/>

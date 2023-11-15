@@ -54,7 +54,7 @@
         <material name="Rock"/>
         <look name="seabed"/>
         <!-- <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/> -->
-        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 5.0"/>
+        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/>
     </static> 
 
         <!-- <static name="ghost_net" type="terrain">
@@ -100,7 +100,7 @@
             <autoping rate="0.5"/>
             <noise range="0.05" horizontal_angle="0.2" vertical_angle="0.5"/>
             <resolution range="0.1" angle="0.1"/>
-            <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 8.0"/>
+            <world_transform rpy="-1.57 0.0 0.0" xyz="-3.0 -3.0 5.0"/>
             <!-- <ros_publisher topic="/dock/navigator/usbl"/> -->
     </comm>
     <static name="trap_blender_mkIII" type="model">
