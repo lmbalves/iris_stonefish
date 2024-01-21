@@ -2,17 +2,19 @@ IRIS AUV Stonefish Simulation Package
 
 Instructions
 
-This was tested in Ubuntu 18.04 and 20.04 without any known issues to this date.
+This was tested in Ubuntu 20.04 without any known issues to this date.
 
-Clone stonefish to your home directory or any other but the workspace for ROS, build and install on your machine. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git
-NOTE: in some machines you may need to run ldconfig in order to use stonefish
-$ sudo ldconfig
+1) Clone stonefish* to your home directory or any other (just not the catkin workspace you use for ROS), build and install on your machine following the instructions on https://stonefish.readthedocs.io/. 
 
-If you dont't have one already, create a workspace
+    \* Version currently suported is 1.3. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git freezed on that version.
 
-Clone stonefish_ros, a fork of the original used in https://github.com/lmbalves/stonefish_ros.git
+    NOTE: in some machines you may need to run ldconfig in order to use stonefish after installing so $ sudo ldconfig
 
-Clone this iris_stonefish into the workspace
+2) If you dont't have one already, create a catkin workspace
 
-Build the workspace and enjoy.
+3) Clone stonefish_ros, there's also a fork of the original used in https://github.com/lmbalves/stonefish_ros.git
+
+4) Clone this repo iris_stonefish into the workspace
+
+Build the workspace and enjoy :).
 
