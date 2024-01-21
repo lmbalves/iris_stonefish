@@ -531,7 +531,7 @@
             <ros_publisher topic="/iris/navigator/usbl"/>
         </comm>
         <!-- <world_transform rpy="0.0 0.0 -1.571" xyz="0.0 -4.0 8.0"/> -->
-        <world_transform rpy="0.0 0.0 3.14159" xyz="-10.0 -10.0 0.0"/>       
+        <world_transform rpy="0.0 0.0 3.14159" xyz="-8.0 -8.0 1.0"/>       
         <ros_subscriber thrusters="/iris/controller/thruster_setpoints" />
         <ros_publisher thrusters="/iris/controller/thruster_state"/>
 
