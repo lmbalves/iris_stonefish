@@ -16,5 +16,14 @@ This was tested in Ubuntu 20.04 without any known issues to this date.
 
 4) Clone this repo iris_stonefish into the workspace
 
-Build the workspace and enjoy :).
+Build the workspace
 
+$ catkin build
+
+To launch the simulation
+
+roslaunch iris_stonefish iris_acustic_full.launch
+
+or
+
+roslaunch iris_stonefish iris_acoustic_no_gpu.launch
