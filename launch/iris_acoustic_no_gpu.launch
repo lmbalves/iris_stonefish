@@ -1,0 +1,14 @@
+<launch>    
+<!-- Configurable arguments -->
+    <arg name="robot_name" default="iris"/>
+
+    <!-- Control Nodes -->
+    <node name="acoustic_pilot" pkg="iris_control" type="acoustic_pilot"/>
+    <node name="thrust_setpoints_pub" pkg="iris_control" type="thrust_setpoints_pub"/>
+    
+    <!-- Run Simulator Only No grapics -->
+    <arg name="simulation_data" value="$(find iris_stonefish)/data"/>
+    <arg name="scenario_description" value="$(find iris_stonefish)/scenarios/iris_tank.scn"/>
+    <arg name="simulation_rate" value="200.0"/>
+    <node name="stonefish_simulator" pkg="stonefish_ros" type="parsed_simulator_nogpu" args="$(arg simulation_data) $(arg scenario_description) $(arg simulation_rate)" output="screen"/>
+</launch>
