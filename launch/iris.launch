@@ -8,7 +8,7 @@
     <node name="setpoints_range_pose" pkg="iris_control" type="setpoints_range_pose"/> -->
      <node name="captain" pkg="iris_control" type="captain"/>
      <node name="setpoints_visual_navigation" pkg="iris_control" type="setpoints_visual_navigation"/>
-     <node name="ghost_net_inference" pkg="iris_vision" type="ghost_net_inference.py"/>
+     <node name="ghost_net_inference_yolov5" pkg="iris_vision" type="ghost_net_inference_yolov5.py"/>
      <node name="plot_path" pkg="iris_control" type="plot_path.py"/>
     <!-- Run Simulator -->
     <include file="$(find stonefish_ros)/launch/simulator.launch">
