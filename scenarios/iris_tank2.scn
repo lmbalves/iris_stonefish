@@ -54,6 +54,6 @@
     <!-- <include file= "$(find iris_stonefish)/scenarios/net.scn"/> -->
 
     <!-- load the robot scenario file-->
-    <include file="$(find iris_stonefish)/scenarios/iris.scn"/>
+    <include file="$(find iris_stonefish)/scenarios/iris_full.scn"/>
     
 </scenario>
