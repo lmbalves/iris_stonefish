@@ -35,7 +35,7 @@
 	        <external_part name="base" type="model" physics="submerged" buoyant="false">
                 <physical>
                     <mesh filename="iris/base.obj" scale="1.0"/>
-                    <!-- <thickness value="0.003"/> -->
+                    <thickness value="0.003"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                 </physical>
                 <visual>
@@ -56,7 +56,7 @@
                     <mesh filename="iris/batt.obj" scale="1.0"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                 </visual>
-                <material name="Aco"/>
+                <material name="Plastic"/>
                 <look name="yellow"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
@@ -98,7 +98,7 @@
                     <mesh filename="iris/escs_cylinder.obj" scale="1.0"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                 </visual>
-                <material name="Aluminium"/>
+                <material name="Plastic"/>
                 <look name="gray"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
@@ -113,7 +113,7 @@
                     <mesh filename="iris/main_cylinder.obj" scale="1.0"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                 </visual>
-                <material name="Aluminium"/>
+                <material name="Plastic"/>
                 <look name="gray"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
@@ -146,7 +146,7 @@
                 <look name="gray"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
-            <!-- <external_part name="left_light" type="model" physics="submerged" buoyant="false">
+            <external_part name="left_light" type="model" physics="submerged" buoyant="false">
                 <physical>
                     <mesh filename="iris/left_light.obj" scale="1.0"/>
 		    <thickness value="0.003"/>
@@ -173,7 +173,7 @@
                 <material name="Fiberglass"/>
                 <look name="oi"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-            </external_part> -->
+            </external_part>
             <external_part name="shield" type="model" physics="submerged" buoyant="false">
                 <physical>
                     <mesh filename="iris/shield.obj" scale="1.0"/>
@@ -243,7 +243,7 @@
                 <look name="black"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
-            <!--<external_part name="thruster_bld" type="model" physics="submerged">
+<!--             <external_part name="thruster_bld" type="model" physics="submerged">
                 <physical>
                     <mesh filename="iris/thruster_bld_min.obj" scale="1.0"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -255,8 +255,8 @@
                 <material name="Neutral"/>
                 <look name="gray"/>
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-            </external_part>
-            <external_part name="thruster_blt" type="model" physics="submerged">
+            </external_part> -->
+          <!--   <external_part name="thruster_blt" type="model" physics="submerged">
                 <physical>
                     <mesh filename="iris/thruster_blt.obj" scale="1.0"/>
                     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -374,24 +374,24 @@
                 <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             </external_part>
              <internal_part name="foam" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.08" height="2.0"/>
-				<origin rpy="0.0 1.571 0.0" xyz="0.0 -0.15 -0.05"/>
-				<material name="Neutral"/>
-				<mass value="2.72"/>
-				<look name="manipulator"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.05 0.0 0.0"/>
-			</internal_part>
-            <internal_part name="foam2" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.08" height="2.0"/>
-				<origin rpy="0.0 1.571 0.0" xyz="0.0 0.15 -0.05"/>
-				<material name="Neutral"/>
-				<mass value="2.72"/>
+				<dimensions radius="0.12" height="1.0"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.066 -0.15 0.0"/>
+				<material name="Foam"/>
+				<mass value="0.02"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part>
-            <mass value="20.0"/>
-            <!-- <inertia xyz="1.0 0.5 0.2"/>
-            <cg xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> -->
+            <internal_part name="foam2" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.12" height="1.0"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.066 0.15 0.0"/>
+				<material name="Foam"/>
+				<mass value="0.02"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part>
+            <!-- <mass value="8.0"/> -->
+            <inertia xyz="1.0 0.5 0.2"/>
+            <cg xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </base_link>
 
         <sensor name="dynamics" type="odometry" rate="30.0">

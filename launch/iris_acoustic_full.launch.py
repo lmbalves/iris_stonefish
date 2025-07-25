@@ -22,7 +22,8 @@ def generate_launch_description():
                 'simulation_rate' : '100.0',
                 'window_res_x' : '800',
                 'window_res_y' : '600',
-                'rendering_quality' : 'low'
+                'rendering_quality' : 'medium',
+                'robot_name' : 'iris'
             }.items()
         )
 
