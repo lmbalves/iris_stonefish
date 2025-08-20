@@ -44,9 +44,15 @@
         <dimensions scalex="2" scaley="2" height="2000.0"/> -->
         <material name="Rock"/>
         <look name="seabed"/>
-        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 10.0"/>
+        <world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 30.0"/>
     </static>
-    
+        <comm name="Modem" device_id="2" type="acoustic_modem">
+            <specs min_vertical_fov="0.0" max_vertical_fov="360.0" range="1000.0"/>
+            <connect device_id="1" occlusion_test="true"/>
+            <world_transform xyz="0.0 0.0 25.0" rpy="0.0 0.0 0.0"/>
+            <link name="Bottom"/>
+        </comm>
+        <!-- <ros_publisher comm="/net"/>  -->
 	<!-- to load dock  -->
     <!-- <include file= "$(find iris_stonefish)/scenarios/dock.scn"/> -->
 

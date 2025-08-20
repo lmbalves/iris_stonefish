@@ -375,7 +375,7 @@
             </external_part>
              <internal_part name="foam" type="cylinder" physics="submerged" buoyant="true">
 				<dimensions radius="0.12" height="1.0"/>
-				<origin rpy="0.0 1.571 0.0" xyz="0.066 -0.15 0.0"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.065 -0.15 0.0"/>
 				<material name="Foam"/>
 				<mass value="0.02"/>
 				<look name="manipulator"/>
@@ -383,7 +383,7 @@
 			</internal_part>
             <internal_part name="foam2" type="cylinder" physics="submerged" buoyant="true">
 				<dimensions radius="0.12" height="1.0"/>
-				<origin rpy="0.0 1.571 0.0" xyz="0.066 0.15 0.0"/>
+				<origin rpy="0.0 1.571 0.0" xyz="0.065 0.15 0.0"/>
 				<material name="Foam"/>
 				<mass value="0.02"/>
 				<look name="manipulator"/>
@@ -454,7 +454,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -470,7 +470,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -486,7 +486,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -502,7 +502,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -518,7 +518,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -534,7 +534,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -550,7 +550,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
 
@@ -566,7 +566,7 @@
             <rotor_dynamics type="zero_order"/>
             <thrust_model type="fluid_dynamics">
                 <thrust_coeff forward="0.0335" reverse="0.0335"/>
-                <torque_coeff value="0.0003"/>
+                <torque_coeff value="0.0"/>
             </thrust_model>
         </actuator>
         <comm name="USBL" device_id="1" type="usbl">
