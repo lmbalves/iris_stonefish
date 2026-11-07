@@ -6,26 +6,32 @@ Tested on Ubuntu 24.04 with ROS 2 Jazzy and Stonefish 1.6.
 
 1) Install ROS 2 Jazzy (https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), including `ros-dev-tools`.
 
-2) Clone Stonefish (https://github.com/patrykcieslak/stonefish) outside your ROS workspace, then build and install it:
+2) Clone the `jazzy` branch of the Stonefish fork outside your ROS workspace, then build and install it:
 
        sudo apt install libglm-dev libsdl2-dev libfreetype-dev libopengl-dev
+       git clone -b jazzy https://github.com/lmbalves/stonefish.git
        cd stonefish && mkdir build && cd build
        cmake -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc)
        sudo make install && sudo ldconfig
 
     The Stonefish library and stonefish_ros2 must be the same version (currently 1.6.0).
 
-3) Create a workspace and clone into `src/`:
-    - stonefish_ros2: https://github.com/patrykcieslak/stonefish_ros2
-    - iris_stonefish (this repo) and iris_control: https://github.com/lmbalves/iris_control
+    The fork is upstream Stonefish 1.6 (https://github.com/patrykcieslak/stonefish) plus a fix for the ocean surface shaders failing to link (`unresolved reference to function ShadingModel`) on some drivers, e.g. NVIDIA.
 
-4) Build the workspace
+3) Create a workspace and clone the `jazzy` branches into `src/`:
+
+       mkdir -p ~/iris_ws/src && cd ~/iris_ws/src
+       git clone -b jazzy https://github.com/lmbalves/stonefish_ros2.git
+       git clone -b jazzy https://github.com/lmbalves/iris_stonefish.git
+       git clone -b jazzy https://github.com/lmbalves/iris_control.git
+
+    The stonefish_ros2 fork is upstream 1.6.0 (https://github.com/patrykcieslak/stonefish_ros2) plus a compile fix for the event camera publisher and a resolvable PCL rosdep key.
+
+4) Build the workspace (from `~/iris_ws`)
 
        source /opt/ros/jazzy/setup.bash
-       rosdep install --from-paths src --ignore-src -y --skip-keys pcl
+       rosdep install --from-paths src --ignore-src -y
        colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-
-    (`--skip-keys pcl`: stonefish_ros2 declares a `pcl` rosdep key that doesn't resolve; `libpcl-dev` is installed with `ros-jazzy-pcl-conversions`.)
 
 To launch the simulation
 
