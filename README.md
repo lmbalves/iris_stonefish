@@ -6,7 +6,7 @@ This was tested in Ubuntu 20.04 without any known issues to this date.
 
 1) Clone stonefish* to your home directory or any other (just not the catkin workspace you use for ROS), build and install on your machine following the instructions on https://stonefish.readthedocs.io/. 
 
-    \* Version currently suported is 1.3. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git freezed on that version.
+    \* Version currently suported is 1.3. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git freezed on that version, on its `master` branch: `git clone -b master https://github.com/lmbalves/stonefish.git` (the fork's default branch is now `jazzy`, Stonefish 1.6 for ROS 2).
 
     NOTE: in some machines you may need to run ldconfig in order to use stonefish after installing so $ sudo ldconfig
 
