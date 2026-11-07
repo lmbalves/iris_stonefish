@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib travessa_b.mtl
+# mtllib (file missing) travessa_b.mtl
 v 0.235449 0.019336 -0.093920
 v 0.229062 0.019444 -0.093920
 v 0.236348 0.018995 -0.093920
@@ -186,7 +186,7 @@ vn -0.9461 -0.3210 -0.0432
 vn -0.9519 -0.3064 0.0000
 vn 0.0000 0.0000 1.0000
 vn 0.0000 -1.0000 0.0000
-usemtl Shell017.001
+# usemtl Shell017.001
 s off
 f 3//1 4//1 5//1
 f 8//1 7//1 6//1

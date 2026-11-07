@@ -1,29 +1,38 @@
-IRIS AUV Stonefish Simulation Package
+IRIS AUV Stonefish Simulation Package (ROS 2)
 
 Instructions
 
-This was tested in Ubuntu 20.04 without any known issues to this date.
+Tested on Ubuntu 24.04 with ROS 2 Jazzy and Stonefish 1.6.
 
-1) Clone stonefish* to your home directory or any other (just not the catkin workspace you use for ROS), build and install on your machine following the instructions on https://stonefish.readthedocs.io/. 
+1) Install ROS 2 Jazzy (https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), including `ros-dev-tools`.
 
-    \* Version currently suported is 1.3. You can find a fork of the original repo used in https://github.com/lmbalves/stonefish.git freezed on that version.
+2) Clone Stonefish (https://github.com/patrykcieslak/stonefish) outside your ROS workspace, then build and install it:
 
-    NOTE: in some machines you may need to run ldconfig in order to use stonefish after installing so $ sudo ldconfig
+       sudo apt install libglm-dev libsdl2-dev libfreetype-dev libopengl-dev
+       cd stonefish && mkdir build && cd build
+       cmake -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc)
+       sudo make install && sudo ldconfig
 
-2) If you dont't have one already, create a catkin workspace
+    The Stonefish library and stonefish_ros2 must be the same version (currently 1.6.0).
 
-3) Clone stonefish_ros, there's also a fork of the original used in https://github.com/lmbalves/stonefish_ros.git
+3) Create a workspace and clone into `src/`:
+    - stonefish_ros2: https://github.com/patrykcieslak/stonefish_ros2
+    - iris_stonefish (this repo) and iris_control: https://github.com/lmbalves/iris_control
 
-4) Clone this repo iris_stonefish into the workspace
+4) Build the workspace
 
-Build the workspace
+       source /opt/ros/jazzy/setup.bash
+       rosdep install --from-paths src --ignore-src -y --skip-keys pcl
+       colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-$ catkin build
+    (`--skip-keys pcl`: stonefish_ros2 declares a `pcl` rosdep key that doesn't resolve; `libpcl-dev` is installed with `ros-jazzy-pcl-conversions`.)
 
 To launch the simulation
 
-roslaunch iris_stonefish iris_acustic_full.launch
+    source install/setup.bash
+    ros2 launch iris_stonefish iris_acoustic_full.launch.py
 
-or
+Notes
 
-roslaunch iris_stonefish iris_acoustic_no_gpu.launch
+- Stonefish 1.6 loads meshes with rapidobj, which fails on `mtllib`/`usemtl` references to missing `.mtl` files. Those lines are commented out in `data/` meshes; do the same for any new OBJ exported without its material file.
+- The legacy ROS 1 launch files (`*.launch`) are kept for reference only.

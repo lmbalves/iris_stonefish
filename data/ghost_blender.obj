@@ -1,6 +1,6 @@
 # Blender v2.93.1 OBJ File: 'ghost_blender.blend'
 # www.blender.org
-mtllib ghost_blender.mtl
+# mtllib (file missing) ghost_blender.mtl
 o Plane
 v -1.853118 -0.022150 1.853118
 v -1.850584 0.022150 1.850584
@@ -2758,7 +2758,7 @@ vn 0.4987 -0.7872 -0.3627
 vn 0.5042 0.6040 -0.6173
 vn -0.5075 -0.7820 -0.3618
 vn -0.4968 0.6087 -0.6186
-usemtl Material.001
+# usemtl Material.001
 s off
 f 291/1/1 292/2/1 193/3/1 21/4/1
 f 292/2/2 291/1/2 22/5/2 194/6/2

@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib motor_support_dr.mtl
+# mtllib (file missing) motor_support_dr.mtl
 v 0.411812 -0.172922 0.033235
 v 0.411676 -0.172683 0.033434
 v 0.411812 -0.172922 0.015630
@@ -520,7 +520,7 @@ vn -0.0002 -0.0002 1.0000
 vn -0.0002 -0.0007 1.0000
 vn 0.0085 -0.0000 1.0000
 vn -0.0004 -0.0008 1.0000
-usemtl Shell024.001
+# usemtl Shell024.001
 s off
 f 1//1 2//1 3//1
 f 3//2 2//2 4//2

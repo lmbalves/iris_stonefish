@@ -1,6 +1,6 @@
 # Blender v2.93.1 OBJ File: 'ghost_blender_mkIII.blend1'
 # www.blender.org
-mtllib ghost_blender_mkIII.mtl
+# mtllib (file missing) ghost_blender_mkIII.mtl
 o Cube
 v 0.994509 1.196219 -0.994510
 v 1.005491 1.203781 -1.005490
@@ -61039,7 +61039,7 @@ vn 0.4022 0.6723 0.6215
 vn 0.4358 0.6999 -0.5659
 vn 0.4455 -0.7243 0.5263
 vn 0.3551 -0.4954 -0.7928
-usemtl Material
+# usemtl Material
 s off
 f 6277/1/1 6278/2/1 5827/3/1 1411/4/1
 f 6278/2/2 6277/1/2 1412/5/2 5828/6/2

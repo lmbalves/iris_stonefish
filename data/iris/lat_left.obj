@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib lat_left.mtl
+# mtllib (file missing) lat_left.mtl
 v 0.051730 0.110023 0.127125
 v 0.023723 0.110023 0.127745
 v -0.128035 0.110023 0.128079
@@ -458,7 +458,7 @@ vn 0.0016 -0.0107 -0.9999
 vn 0.9999 -0.0108 -0.0108
 vn 0.9999 0.0000 -0.0103
 vn -0.9999 0.0108 -0.0105
-usemtl Shell015.001
+# usemtl Shell015.001
 s off
 f 1//1 2//1 231//1
 f 3//1 4//1 5//1

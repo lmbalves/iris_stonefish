@@ -1,8 +1,8 @@
 # FreeCAD v0.18.4 build Arch module
 # http://www.freecadweb.org
-mtllib motor_support.mtl
+# mtllib (file missing) motor_support.mtl
 o Shell025
-usemtl color_cccccc
+# usemtl color_cccccc
 v 442.915651 39.869991 156.884112
 v 444.104499 39.869991 158.824136
 v 442.868831 17.475034 156.82004

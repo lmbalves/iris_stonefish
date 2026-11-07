@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib shell_foam_right.mtl
+# mtllib (file missing) shell_foam_right.mtl
 v 0.065112 -0.126104 -0.160254
 v 0.071439 -0.109977 -0.159885
 v 0.223896 -0.162934 -0.038853
@@ -927,7 +927,7 @@ vn -0.2075 -0.8151 -0.5409
 vn 0.1600 0.0419 -0.9862
 vn 0.1474 -0.0091 -0.9890
 vn 0.1248 0.0087 -0.9921
-usemtl Shell051.001
+# usemtl Shell051.001
 s off
 f 3//1 4//1 5//1
 f 6//2 7//2 8//2

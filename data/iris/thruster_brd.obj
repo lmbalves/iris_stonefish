@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib thruster_brd.mtl
+# mtllib (file missing) thruster_brd.mtl
 v 0.375773 -0.176619 0.093174
 v 0.376891 -0.177271 0.092680
 v 0.374670 -0.176313 0.093379
@@ -14038,7 +14038,7 @@ vn -0.0189 -0.8714 -0.4902
 vn -0.9251 0.0792 0.3713
 vn -0.9023 -0.3506 0.2507
 vn 0.9178 -0.1720 0.3578
-usemtl Part__Feature008.001
+# usemtl Part__Feature008.001
 s off
 f 1//1 2//1 7//1
 f 3//2 1//2 7//2

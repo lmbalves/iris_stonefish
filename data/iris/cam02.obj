@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib cam02.mtl
+# mtllib (file missing) cam02.mtl
 v -0.346184 -0.019116 -0.020123
 v -0.346184 -0.023286 -0.025277
 v -0.351179 -0.015761 -0.010791
@@ -749,7 +749,7 @@ vn 0.1440 0.9461 0.2903
 vn -0.1499 0.8618 0.4847
 vn 0.1622 0.6966 0.6989
 vn -0.1749 0.5405 0.8230
-usemtl Fusion003.001
+# usemtl Fusion003.001
 s off
 f 33//1 1//1 2//1
 f 33//2 3//2 1//2

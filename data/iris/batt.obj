@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib batt.mtl
+# mtllib (file missing) batt.mtl
 v -0.081536 0.110200 0.006840
 v -0.081536 -0.109800 0.096840
 v -0.081536 0.110200 0.096840
@@ -15,7 +15,7 @@ vn 1.0000 0.0000 0.0000
 vn 0.0000 0.0000 -1.0000
 vn 0.0000 1.0000 0.0000
 vn 0.0000 -1.0000 0.0000
-usemtl Part__Feature022.001
+# usemtl Part__Feature022.001
 s off
 f 1//1 2//1 3//1
 f 1//1 4//1 2//1

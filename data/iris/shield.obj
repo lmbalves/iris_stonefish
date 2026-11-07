@@ -1,6 +1,6 @@
 # Blender v2.83.0 OBJ File: 'iris_shells.blend'
 # www.blender.org
-mtllib shield.mtl
+# mtllib (file missing) shield.mtl
 v 0.054303 -0.110665 -0.167122
 v 0.059928 0.037100 -0.166196
 v 0.296072 0.109316 -0.095369
@@ -167,7 +167,7 @@ vn 0.0004 -1.0000 -0.0019
 vn 0.0018 -1.0000 -0.0045
 vn 0.0000 -1.0000 0.0000
 vn 0.0018 -1.0000 -0.0046
-usemtl Shell008.001
+# usemtl Shell008.001
 s off
 f 1//1 5//1 2//1
 f 6//2 4//2 7//2
