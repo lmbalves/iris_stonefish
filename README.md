@@ -40,7 +40,20 @@ To launch the simulation
     source install/setup.bash
     ros2 launch iris_stonefish iris_acoustic_full.launch.py
 
+Headless (no window, no GPU needed), e.g. for control tests or scripted runs:
+
+    ros2 launch iris_stonefish iris_acoustic_full_nogpu.launch.py
+
+This uses `scenarios/iris_tank2_nogpu.scn` / `iris_full_nogpu.scn`, a copy of the vehicle without the cameras (Stonefish console mode rejects vision sensors). Keep `iris_full_nogpu.scn` in sync with `iris_full.scn` when editing the vehicle.
+
+To check the mass model after editing the vehicle (CG, CB, inertia and the placement of every part, as Stonefish builds them):
+
+    ros2 run iris_stonefish iris_mass_properties $(ros2 pkg prefix iris_stonefish)/share/iris_stonefish/data/ <scenario.scn> 40
+
+The scenario must use plain include paths (`$(find ...)` is resolved by stonefish_ros2, not by this tool), and the data path needs the trailing slash. The vehicle trims level when CG and CB coincide in x and y.
+
 Notes
 
+- Body frame is NED with +x at the bow. The meshes in `data/iris` are authored with the bow at -x, so every mesh part in `iris_full.scn` carries a yaw of pi in its `compound_transform`; primitive parts (hull box, foam floats), sensors and actuators are placed directly in the bow=+x frame. Thruster positions and axes in the scenario must match the allocation matrix in `iris_control/src/thrust_setpoints_pub.cpp`. Stonefish composes `origin` and `compound_transform`, so a part needs its position mirrored *or* a yaw of pi, never both.
 - Stonefish 1.6 loads meshes with rapidobj, which fails on `mtllib`/`usemtl` references to missing `.mtl` files. Those lines are commented out in `data/` meshes; do the same for any new OBJ exported without its material file.
 - The legacy ROS 1 launch files (`*.launch`) are kept for reference only.

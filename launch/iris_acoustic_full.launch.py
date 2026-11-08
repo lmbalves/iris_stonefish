@@ -20,25 +20,25 @@ def generate_launch_description():
                 'simulation_data' : PathJoinSubstitution([FindPackageShare('iris_stonefish'), 'data']),
                 'scenario_desc' : PathJoinSubstitution([FindPackageShare('iris_stonefish'), 'scenarios', 'iris_tank2.scn']),
                 'simulation_rate' : '100.0',
-                'window_res_x' : '800',
-                'window_res_y' : '600',
+                'window_res_x' : '1024',
+                'window_res_y' : '768',
                 'rendering_quality' : 'high',
                 'robot_name' : 'iris'
             }.items()
+        ),
+
+        # Launch control nodes
+        Node(
+            package='iris_control',
+            executable='acoustic_pilot',
+            name='acoustic_pilot',
+            parameters=[{'robot_name': 'iris'}]
+        ),
+
+        Node(
+            package='iris_control',
+            executable='thrust_setpoints_pub',
+            name='thrust_setpoints_pub',
+            parameters=[{'robot_name': 'iris'}]
         )
-
-        # # Launch control nodes
-        # Node(
-        #     package='iris_control',
-        #     executable='acoustic_pilot',
-        #     name='acoustic_pilot',
-        #     parameters=[{'robot_name': iris}]
-        # ),
-
-        # Node(
-        #     package='iris_control',
-        #     executable='thrust_setpoints_pub',
-        #     name='thrust_setpoints_pub',
-        #     parameters=[{'robot_name': iris}]
-        # )
     ])
